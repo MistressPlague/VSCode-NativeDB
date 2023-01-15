@@ -1,9 +1,13 @@
 {
-	"name": "Native-DB-GTA-V",
-	"displayName": "GTA V Natives",
+	"name": "Kanna-NativeDB GTA V",
+	"displayName": "GTA V NativeDB Support",
 	"description": "GTA V Lua natives auto completion and signatures help",
 	"publisher": "YorkLucis, Kanna",
-	"version": "0.3.1",
+	"repository": {
+		"url": "https://github.com/MistressPlague/VSCode-NativeDB",
+		"type": "git"
+	},
+	"version": "0.1.0",
 	"icon": "images/icon.png",
 	"engines": {
 		"vscode": "^1.55.0"
@@ -36,7 +40,17 @@
 				],
 				"configuration": "./language-configuration.json"
 			}
-		]
+		],
+		"configuration": {
+			"title": "Kanna",
+			"properties": {
+				"kanna.useNamespaces": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to use namespaces with natives being predicted."
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run package",
@@ -68,14 +82,5 @@
 	},
 	"dependencies": {
 		"node-fetch": "^2.6.1"
-	},
-	"__metadata": {
-		"publisherDisplayName": "York Lucis, Kanna",
-		"targetPlatform": "undefined",
-		"isApplicationScoped": false,
-		"updated": false,
-		"isPreReleaseVersion": false,
-		"installedTimestamp": 1669759859817,
-		"preRelease": false
 	}
 }
